@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebApplication1.Models.Message>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>孟澤の聊天室</h2>
+
+<p><h3>
+    @Html.ActionLink("建立新的", "Create")
+       </h3></p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            @Html.ActionLink("編輯", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("明細", "Details", new { id=item.Id }) |
+            @Html.ActionLink("刪除", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
