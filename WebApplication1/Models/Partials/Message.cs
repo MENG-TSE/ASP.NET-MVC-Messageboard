@@ -11,11 +11,21 @@ namespace WebApplication1.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
+    [MetadataType(typeof(Auth002MD))]
     public partial class Message
     {
-        public int Id { get; set; }
-        public string AccountId { get; set; }
-        public string Content { get; set; }
-    }
+        public class Auth002MD
+        {
+            public int Id { get; set; }
+
+            [DisplayName("帳號")]
+            public string AccountId { get; set; }
+
+            [DisplayName("內容")]
+            public string Content { get; set; }
+        }
+     }
 }

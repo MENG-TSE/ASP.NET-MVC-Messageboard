@@ -46,7 +46,7 @@ namespace WebApplication1.Controllers
         // 詳細資訊，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Username,Password,Name")] Account account)
+        public ActionResult Create([Bind(Include = "Id,Username,Password,Name,E_mail")] Account account)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace WebApplication1.Controllers
         // 詳細資訊，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Username,Password,Name")] Account account)
+        public ActionResult Edit([Bind(Include = "Id,Username,Password,Name,E_mail")] Account account)
         {
             if (ModelState.IsValid)
             {
