@@ -5,17 +5,17 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Username" Type="String" MaxLength="32" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="32" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="32" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="E_mail" Type="String" MaxLength="32" FixedLength="true" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="E_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Message">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="AccountId" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="true" />
+    <Property Name="AccountId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="MessageBoardEntities" annotation:LazyLoadingEnabled="true">

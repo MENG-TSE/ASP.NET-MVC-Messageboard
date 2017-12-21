@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
 
+
 namespace WebApplication1.Controllers
 {
     public class AccountsController : Controller
@@ -50,9 +51,12 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Account.Add(account);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (db.Account.FirstOrDefault(y => y.Username == account.Username) == null)
+                {
+                    db.Account.Add(account);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
 
             return View(account);
@@ -123,5 +127,27 @@ namespace WebApplication1.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Login(Account Post_Account)
+        {
+            Account account = db.Account.FirstOrDefault(x => x.Username == Post_Account.Username);
+            if (account == null || string.IsNullOrEmpty(Post_Account.Username) || string.IsNullOrEmpty(Post_Account.Password) || account.Password != Post_Account.Password)
+            {
+                ViewBag.Error = "帳號或密碼輸入錯誤";
+                return View("Login");
+            }
+//       //SessionPersister.Username = account.Username;
+            return RedirectToAction("Index","Messages1");
+        }
+
     }
 }

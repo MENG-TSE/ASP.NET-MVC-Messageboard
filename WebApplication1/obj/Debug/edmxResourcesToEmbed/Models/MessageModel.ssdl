@@ -5,17 +5,17 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Username" Type="nchar" MaxLength="32" Nullable="false" />
-    <Property Name="Password" Type="nchar" MaxLength="32" Nullable="false" />
-    <Property Name="Name" Type="nchar" MaxLength="32" Nullable="false" />
-    <Property Name="E-mail" Type="nchar" MaxLength="32" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="E-mail" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Message">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="AccountId" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="AccountId" Type="nvarchar" MaxLength="50" />
     <Property Name="Content" Type="nvarchar(max)" />
   </EntityType>
   <EntityContainer Name="MessageBoardModel1StoreContainer">
