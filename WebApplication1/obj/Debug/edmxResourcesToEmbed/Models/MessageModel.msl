@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="MessageBoardModel1StoreContainer" CdmEntityContainer="MessageBoardEntities">
+  <EntityContainerMapping StorageEntityContainer="MessageboardModelStoreContainer" CdmEntityContainer="MessageboardEntities1">
     <EntitySetMapping Name="Account">
-      <EntityTypeMapping TypeName="MessageBoardModel1.Account">
+      <EntityTypeMapping TypeName="MessageboardModel.Account">
         <MappingFragment StoreEntitySet="Account">
-          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="E_mail" ColumnName="E_mail" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Username" ColumnName="Username" />
@@ -13,10 +13,10 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Message">
-      <EntityTypeMapping TypeName="MessageBoardModel1.Message">
+      <EntityTypeMapping TypeName="MessageboardModel.Message">
         <MappingFragment StoreEntitySet="Message">
-          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
           <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

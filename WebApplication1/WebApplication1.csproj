@@ -190,8 +190,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\MessageModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MessageModel.Context.cs</LastGenOutput>
       <DependentUpon>MessageModel.edmx</DependentUpon>
+      <LastGenOutput>MessageModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\MessageModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

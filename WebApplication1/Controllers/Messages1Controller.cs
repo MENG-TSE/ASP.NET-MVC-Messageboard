@@ -12,7 +12,7 @@ namespace WebApplication1.Controllers
 {
     public class Messages1Controller : Controller
     {
-        private MessageBoardEntities db = new MessageBoardEntities();
+        private MessageboardEntities1 db = new MessageboardEntities1();
 
         // GET: Messages1
         public ActionResult Index()
