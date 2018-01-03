@@ -25,7 +25,7 @@ namespace WebApplication1.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Account> Account { get; set; }
         public virtual DbSet<Message> Message { get; set; }
+        public virtual DbSet<Account> Account { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
-
+using WebApplication1.Security;
 
 namespace WebApplication1.Controllers
 {
@@ -145,9 +145,17 @@ namespace WebApplication1.Controllers
                 ViewBag.Error = "帳號或密碼輸入錯誤";
                 return View("Login");
             }
-//       //SessionPersister.Username = account.Username;
+            SessionPersister.Username = account.Username;
             return RedirectToAction("Index","Messages1");
         }
 
+
+        public ActionResult Logout()
+        {
+            Session.RemoveAll();
+            return RedirectToAction("Index");
+        }
+
     }
+
 }
