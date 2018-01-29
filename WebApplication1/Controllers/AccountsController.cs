@@ -9,6 +9,7 @@ namespace WebApplication1.Controllers
 {
     public class AccountsController : Controller
     {
+
         private MessageboardEntities1 db = new MessageboardEntities1();
 
         // GET: Accounts
@@ -136,13 +137,15 @@ namespace WebApplication1.Controllers
         public ActionResult Login(Account Post_Account)
         {
             Account account = db.Account.FirstOrDefault(x => x.Username == Post_Account.Username);
+
             if (account == null || string.IsNullOrEmpty(Post_Account.Username) || string.IsNullOrEmpty(Post_Account.Password) || account.Password != Post_Account.Password)
             {
                 ViewBag.Error = "帳號或密碼輸入錯誤";
                 return View("Login");
             }
-            SessionPersister.Username = account.Username;
-            return RedirectToAction("Index","Messages1");
+                SessionPersister.Username = account.Username;
+            //  return RedirectToAction("Index", "Messages1");
+            return View ("Success");
         }
 
 

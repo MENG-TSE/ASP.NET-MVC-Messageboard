@@ -17,7 +17,7 @@ namespace Messageboard.Security
             if (string.IsNullOrEmpty(SessionPersister.Username))
             {
                 //是,導入登入頁面
-                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "account", action = "Login" }));
+                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Accounts", action = "Login" }));
             }
             else
             {
@@ -29,7 +29,7 @@ namespace Messageboard.Security
                 if (!customPrincipal.IsInRole(Roles))
                 {
                     //無則導入不具權限頁面
-                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { Controller = "account", action = "AccessDenied" }));
+                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { Controller = "Accounts", action = "AccessDenied" }));
                 }
             }
         }

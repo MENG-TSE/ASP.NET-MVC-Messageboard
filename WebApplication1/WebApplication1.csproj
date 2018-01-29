@@ -251,6 +251,12 @@
     <Content Include="Views\Accounts\Edit.cshtml" />
     <Content Include="Views\Accounts\Index.cshtml" />
     <Content Include="Views\Accounts\Login.cshtml" />
+    <Content Include="Views\Work\Work1.cshtml" />
+    <Content Include="Views\Work\Work2.cshtml" />
+    <Content Include="Views\Work\Work3.cshtml" />
+    <Content Include="Views\Accounts\AccessDenied.cshtml" />
+    <Content Include="Views\Accounts\Success.cshtml" />
+    <Content Include="Views\Accounts\role.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

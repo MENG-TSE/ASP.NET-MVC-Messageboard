@@ -13,7 +13,7 @@
     <EntitySetMapping Name="Account">
       <EntityTypeMapping TypeName="MessageboardModel.Account">
         <MappingFragment StoreEntitySet="Account">
-          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Roles" ColumnName="Roles" />
           <ScalarProperty Name="E_mail" ColumnName="E_mail" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Password" ColumnName="Password" />

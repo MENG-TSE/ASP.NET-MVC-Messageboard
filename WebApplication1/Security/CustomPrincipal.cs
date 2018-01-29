@@ -27,7 +27,7 @@ namespace Messageboard.Security
             //role規則已"，"排入陣列
             var roles = role.Split(new char[] { ',' });
             //any()判斷是否包含任何項目
-            return roles.Any(x => this.account.Role.Contains(x));
+            return roles.Any(x => this.account.Roles.Contains(x));
         }
     }
 }

@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Success";
+}
+@using WebApplication1.Security
+
+<h2>登入成功</h2>
+
+<h3>Hello, @SessionPersister.Username</h3>
+
+<div>
+    @Html.ActionLink("孟澤の聊天室", "Work1", "Work")
+</div>
+
+<div>
+    @Html.ActionLink("個人資料表", "Work2", "Work")
+</div>
+
+@*<div>
+    @Html.ActionLink("工作3", "Work3", "Work")
+</div>*@
+
+<div>
+    @Html.ActionLink("登出", "Login", "Accounts")
+</div>

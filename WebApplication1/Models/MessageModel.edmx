@@ -14,7 +14,7 @@
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="E_mail" Type="nvarchar" MaxLength="50" />
-          <Property Name="Role" Type="nvarchar" MaxLength="50" />
+          <Property Name="Roles" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Message">
           <Key>
@@ -53,7 +53,7 @@
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="E_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Roles" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -73,7 +73,7 @@
           <EntitySetMapping Name="Account">
             <EntityTypeMapping TypeName="MessageboardModel.Account">
               <MappingFragment StoreEntitySet="Account">
-                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Roles" ColumnName="Roles" />
                 <ScalarProperty Name="E_mail" ColumnName="E_mail" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
