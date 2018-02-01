@@ -19,7 +19,8 @@
                 </button>
                 @Html.ActionLink("應用程式名稱", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            @Html.Partial("_PartialRole")
+            @*<div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("首頁", "Index", "Home")</li>
                     <li>@Html.ActionLink("關於", "About", "Home")</li>
@@ -28,7 +29,7 @@
                     <li>@Html.ActionLink("個人資料列表", "Index", "Accounts")</li>
                     <li>@Html.ActionLink("登入", "Login", "Accounts")</li>
                 </ul>
-            </div>
+            </div>*@
         </div>
     </div>
     <div class="container body-content">

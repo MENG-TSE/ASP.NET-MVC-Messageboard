@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using Messageboard.Security;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -13,12 +14,14 @@ namespace WebApplication1.Controllers
         private MessageboardEntities1 db = new MessageboardEntities1();
 
         // GET: Accounts
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Index()
         {
             return View(db.Account.ToList());
         }
 
         // GET: Accounts/Details/5
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -60,6 +63,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Accounts/Edit/5
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,6 +83,7 @@ namespace WebApplication1.Controllers
         // 詳細資訊，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "Id,Username,Password,Name,E_mail")] Account account)
         {
             if (ModelState.IsValid)
@@ -91,6 +96,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Accounts/Delete/5
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,6 +114,7 @@ namespace WebApplication1.Controllers
         // POST: Accounts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Account account = db.Account.Find(id);

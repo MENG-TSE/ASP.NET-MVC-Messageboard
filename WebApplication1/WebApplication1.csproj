@@ -257,6 +257,7 @@
     <Content Include="Views\Accounts\AccessDenied.cshtml" />
     <Content Include="Views\Accounts\Success.cshtml" />
     <Content Include="Views\Accounts\role.cshtml" />
+    <Content Include="Views\Shared\_PartialRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
